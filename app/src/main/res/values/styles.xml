@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 横向线条 -->
+    <style name="h_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/h_line2</item>
+    </style>
+
+    <!-- 横向线条 -->
+    <style name="h_line7">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">7dp</item>
+        <item name="android:background">#dcdcdc</item>
+    </style>
+    <!-- 纵向线条 -->
+
+    <style name="TabLayoutTextStyle">
+        <!--<item name="android:textStyle">bold</item>-->
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!--底部导航栏-->
+    <style name="tab_menu_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:textSize">10.5sp</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:textColor">@drawable/selector_color_radiobutton</item>
+    </style>
+
+    <!--星评-->
+
+    <!--星评-->
+    <style name="myRatingBarBig2" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_self_big2</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:maxWidth">30dp</item>
+    </style>
+
+    <!-- 圆形图片-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+    <!--多选框样式-->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+</resources>

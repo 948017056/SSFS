@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="22dp"
+    android:layout_marginRight="12dp"
+    android:paddingLeft="12dp">
+
+    <com.cctv.ssfs.customview.CircleImageView
+        android:id="@+id/iv_headportrait"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6dp"
+        android:text="+1"
+        android:textColor="@color/red3"
+        android:textSize="@dimen/name"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/relative_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/iv_headportrait"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_comment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名字"
+            android:textColor="@color/black_name"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" />
+
+        <com.cctv.ratingbarlibrary.ScaleRatingBar
+            android:id="@+id/rb_starscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/tv_comment_name"
+            app:srb_clickable="false"
+            app:srb_drawableEmpty="@mipmap/starrating"
+            app:srb_drawableFilled="@mipmap/starratingstatus"
+            app:srb_isIndicator="false"
+            app:srb_numStars="5"
+            app:srb_scrollable="false"
+            app:srb_starHeight="10dp"
+            app:srb_starPadding="0.5dp"
+            app:srb_starWidth="10dp" />
+
+        <ImageView
+            android:id="@+id/iv_like_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_like_count"
+            android:padding="5dp"
+            android:src="@mipmap/like" />
+
+        <TextView
+            android:id="@+id/tv_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="bottom"
+            android:text="0"
+            android:textColor="@color/red3"
+            android:textSize="@dimen/name" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_top"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toRightOf="@+id/iv_headportrait"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lineSpacingExtra="7dp"
+            android:text="内容"
+            android:textColor="#444444"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tv_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/expand"
+            android:textColor="@color/gray_tip"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_comment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="时间"
+            android:textColor="@color/gray_tip"
+            android:textSize="@dimen/text_size_12" />
+
+    </LinearLayout>
+</RelativeLayout>

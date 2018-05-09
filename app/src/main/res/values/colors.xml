@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bacak">#000000</color>
+
+    <color name="black_content">#333333</color>
+    <color name="black_name">#060606</color>
+    <color name="black_summary_info">#666666</color>
+
+    <color name="gray_tip">#999999</color>
+    <color name="v_line">#bfbfbf</color>
+    <color name="white">#FFFFFF</color>
+    <color name="v_line2">#f2f2f2</color>
+    <color name="h_line2">#efefef</color>
+    <color name="gray_bg2">#f9f9f9</color>
+    <color name="gray_title">#aaaaaa</color>
+
+    <color name="gray">#dddddd</color>
+    <color name="gray_dark">#707070</color>
+    <color name="gray_content">#929292</color>
+    <color name="gray_name">#ccffffff</color>
+
+
+    <color name="yellow">#F5A44F</color>
+    <color name="yellow3">#e9cc7c</color>
+
+    <color name="blue_money">#27a5e6</color>
+
+    <color name="btn_click">#50000000</color>
+    <color name="green_7">#18c920</color>
+
+    <color name="bigbigin">#5c0005</color>
+    <color name="user_bg">#e02e24</color>
+    <color name="centerin">#f7595a</color>
+    <color name="red">#ff3e3e</color>
+    <color name="red_money">#ed2e29</color>
+    <color name="red2">#e73434</color>
+    <color name="red3">#fb5756</color>
+    <color name="red4">#e74a4a</color>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fcf="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.cctv.fancycoverflow.FancyCoverFlow
+        android:id="@+id/fancyCoverFlow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fcf:maxRotation="0"
+        fcf:scaleDownGravity="0.5"
+        fcf:unselectedAlpha="0.2"
+        fcf:unselectedScale="0.8" />
+
+</LinearLayout>

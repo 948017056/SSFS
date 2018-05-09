@@ -1,0 +1,95 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    tools:context="com.cctv.ssfs.view.home.fagment.BoughtFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:text="点击星星评分"
+            android:textColor="@color/gray_title"
+            android:textSize="@dimen/text_size_12" />
+
+        <com.cctv.ratingbarlibrary.ScaleRatingBar
+            android:id="@+id/rb_starscore"
+            style="@style/myRatingBarBig2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
+            app:srb_clickable="true"
+            app:srb_numStars="5"
+            app:srb_scrollable="true"
+            app:srb_starHeight="30dp"
+            app:srb_starPadding="8dp"
+            app:srb_starWidth="30dp" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="0/2000" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bbb" />
+
+        <View style="@style/h_line7" />
+
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="写下你的真实感受吧..."
+            android:lineSpacingExtra="5dp"
+            android:padding="12dp"
+            android:textCursorDrawable="@drawable/cursor_edittext_color"
+            android:textSize="@dimen/text_size_16" />
+
+        <View
+            style="@style/h_line"
+            android:background="#eeeeee" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal">
+
+            <CheckBox
+                android:id="@+id/chenckBox"
+                style="@style/CustomCheckboxTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingRight="4dp"
+                android:paddingTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/share" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

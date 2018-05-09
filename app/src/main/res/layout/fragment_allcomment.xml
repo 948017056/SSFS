@@ -1,0 +1,10 @@
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recycler_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutManager="@string/rv_manager_linearlayout"
+    tools:context="com.cctv.ssfs.view.home.fagment.AllCommentFragment">
+
+</android.support.v7.widget.RecyclerView>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_stock_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layout_comment_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f6f2e6"
+            android:padding="@dimen/dp_10"
+            android:visibility="gone">
+
+            <com.cctv.ssfs.customview.CircleImageView
+                android:id="@+id/iv_headportrait"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="@dimen/dp_10" />
+
+            <RelativeLayout
+                android:id="@+id/relative_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/iv_headportrait"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_comment_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_name"
+                    android:textSize="@dimen/text_size_16"
+                    android:textStyle="bold" />
+
+                <com.cctv.ratingbarlibrary.ScaleRatingBar
+                    android:id="@+id/rb_starRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@id/tv_comment_status"
+                    app:srb_drawableEmpty="@mipmap/starrating"
+                    app:srb_drawableFilled="@mipmap/starratingstatus"
+                    app:srb_numStars="5"
+                    app:srb_starHeight="10dp"
+                    app:srb_starPadding="0.5dp"
+                    app:srb_starWidth="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_return_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/rb_starRating"
+                    android:text="时间"
+                    android:textColor="@color/gray_tip"
+                    android:textSize="@dimen/text_size_12" />
+            </RelativeLayout>
+
+            <TextView
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:id="@+id/tv_comment_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_headportrait"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black_name"
+                android:textSize="@dimen/text_size_14" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btn_intersted"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="3.5"
+            android:background="@drawable/shape_rectangle_trans_red_radio6"
+            android:gravity="center"
+            android:text="想买"
+            android:textColor="@color/red2"
+            android:textSize="@dimen/name"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/btn_bought"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="13dp"
+            android:layout_weight="6.5"
+            android:background="@drawable/shape_rectangle_trans_red_radio6"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:text="买过"
+                android:textColor="@color/red2"
+                android:textSize="@dimen/name" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@mipmap/redstar" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:src="@mipmap/redstar" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:src="@mipmap/redstar" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:src="@mipmap/redstar" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:src="@mipmap/redstar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="27dp"
+        android:background="#bbb" />
+
+    <View style="@style/h_line7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingLeft="12dp">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="18dp"
+            android:background="@color/bacak" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/drygoods"
+            android:textColor="@color/black_name"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_goods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="@string/rv_manager_linearlayout" />
+
+        <TextView
+            android:id="@+id/tv_nogoods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler_stock"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="30dp"
+            android:text="暂无相关干货"
+            android:textColor="@color/black_summary_info"
+            android:textSize="@dimen/text_size_16"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bbb" />
+
+    <View style="@style/h_line7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingLeft="12dp"
+        android:paddingTop="@dimen/dp_10">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="18dp"
+            android:background="@color/bacak" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/shortcomment"
+            android:textColor="@color/black_name"
+            android:textSize="@dimen/name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/shape_rectangle_trans_red_radio6"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp"
+            android:text="@string/writecomment"
+            android:textColor="@color/red2"
+            android:textSize="@dimen/text_size_11" />
+
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <TextView
+        android:id="@+id/tv_nocomment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/recycler_stock"
+        android:gravity="center"
+        android:paddingBottom="50dp"
+        android:paddingTop="30dp"
+        android:text="暂无短评"
+        android:textColor="@color/black_summary_info"
+        android:textSize="@dimen/text_size_16"
+        android:visibility="gone" />
+</LinearLayout>

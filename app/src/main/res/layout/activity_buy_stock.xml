@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.cctv.ssfs.view.user.BuyStockActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_buybought"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        zhy:layoutManager="@string/rv_manager_linearlayout" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_noadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="您还没有添加想买的个股"
+        android:textColor="@color/bacak"
+        android:textSize="@dimen/text_size_16"
+        android:visibility="gone" />
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="想买的个股"
+        android:textColor="@color/bacak"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.cctv.ssfs.customview.flowlayout.TagFlowLayout
+            android:id="@+id/tag_buyFlowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            zhy:max_select="-1" />
+
+
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/hotsearch"
+        android:textColor="@color/bacak"
+        android:textSize="14sp" />
+
+    <com.cctv.ssfs.customview.flowlayout.TagFlowLayout
+        android:layout_marginLeft="20dp"
+        android:id="@+id/tag_hotFlowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        zhy:max_select="-1" />-->
+
+</LinearLayout>

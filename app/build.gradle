@@ -1,0 +1,148 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.cctv.ssfs"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "versionCode"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        ndk {
+            // 声明创建so库的文件名,会自动添加lib前缀, 添加了前缀,不会自动添加
+            moduleName "app"
+            abiFilters "armeabi-v7a"
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+
+
+    dexOptions {
+        javaMaxHeapSize "8g"
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('E:/cctv/SSFS_ListingWind/qj_test.keystore')
+            storePassword "123456"
+            keyAlias 'qj_test'
+            keyPassword "123456"
+        }
+        release {
+            storeFile file('E:/cctv/SSFS_ListingWind/qj_test.keystore')
+            storePassword "123456"
+            keyAlias 'qj_test'
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            shrinkResources false // 移除无用的resource文件
+            minifyEnabled false //不启用混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro',
+                    'proguard-fresco.pro'
+            //签名配置
+            signingConfig signingConfigs.debug
+        }
+        release {
+            shrinkResources false // 移除无用的resource文件
+            minifyEnabled false //不启用混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名配置
+            signingConfig signingConfigs.release
+        }
+    }
+
+    //多渠道打包支持
+    productFlavors {
+        xiaomi {}
+        qh360 {}
+        baidu {}
+        oppo {}
+        huawei {}
+        vivo {}
+        Cctv {//投放华为应用市场
+            //     manifestPlaceholders = [UMENG_CHANNEL_VALUE: Huawei]
+        }
+
+    }
+    //注意我注释掉的，可以去掉注释，那样的话，下面这句就可以不用了
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = outputFile.name.replace(".apk", "-${defaultConfig.versionName}.apk")
+                outputFileName = fileName
+            }
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs' //this way we can find the .aar file in libs folder
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':BaseRecyclerViewAdapterHelper')
+    implementation project(':material-spinner-1.0.5')
+    implementation project(':fancycoverflow')
+    implementation project(':xtablayout')
+    implementation project(':ratingbarlibrary')
+    implementation project(':push')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'org.glassfish:javax.annotation:10.0-b28'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.11'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    implementation files('libs/umeng-share-core-6.9.1.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.1.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.1.jar')
+    implementation files('libs/umeng-sharetool-6.9.1.jar')
+    testImplementation 'junit:junit:4.12'
+    implementation files('libs/umeng-common-1.5.0.jar')
+    implementation files('libs/umeng-debug-1.0.0.jar')
+    implementation files('libs/utdid4all-1.1.5.3_proguard.jar')
+    compile 'com.xdandroid:hellodaemon:+'
+    compile 'com.qianwen:update-app:3.3.8'
+    compile 'com.qianwen:okhttp-utils:3.8.0'
+    compile 'com.youth.banner:banner:1.4.10'
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cctv.ssfs.view.user.CollectionActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_collection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="@string/rv_manager_linearlayout" />
+
+
+    <TextView
+        android:id="@+id/tv_notCollection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="您还没有收藏干货"
+        android:textColor="@color/bacak"
+        android:textSize="@dimen/text_size_16"
+        android:visibility="gone" />
+</LinearLayout>
